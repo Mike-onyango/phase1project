@@ -19,6 +19,31 @@ const cars = [
     {id: 6, name: 'vogue', country: 'England'}
 ]
 
+const proboxBtn = document.getElementById('proboxBtn');
+const vitzBtn = document.getElementById('vitzBtn');
+const foresterBtn = document.getElementById('foresterBtn');
+
+// Event listener for Probox button
+proboxBtn.addEventListener('mouseover', () => {
+    console.log('Mouseover event on Probox button');
+    // Add your desired functionality here
+});
+
+// Event listener for Vitz button
+vitzBtn.addEventListener('click', () => {
+    console.log('Click event on Vitz button');
+    // Add your desired functionality here
+});
+
+// Event listener for Forester button
+foresterBtn.addEventListener('keydown', (event) => {
+    console.log('Keydown event on Forester button');
+    // Add your desired functionality here
+    console.log('Pressed key:', event.key);
+});
+
+
+
 // get all cars
 app.get('/api/cars',(req, res) =>{
     res.send(cars)
